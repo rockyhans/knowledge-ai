@@ -2,7 +2,7 @@
 
 > A production-style, minimal RAG (Retrieval-Augmented Generation) application that lets users ingest notes and URLs, performs boundary-aware chunking and vector embedding, and answers natural-language questions grounded strictly in saved knowledge with citations.
 
-Built for the **Turium** interview challenge following all functional and non-functional specifications.
+**https://knowledge-ai-pied.vercel.app/**
 
 ---
 
