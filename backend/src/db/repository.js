@@ -13,6 +13,12 @@ export function getItemById(id) {
   return db.prepare(`SELECT id, type, title, source, content, created_at FROM items WHERE id = ?`).get(id);
 }
 
+export function deleteItem(id) {
+  const statement = db.prepare(`DELETE FROM items WHERE id = ?`);
+  const result = statement.run(id);
+  return result.changes > 0;
+}
+
 export function listItems() {
   return db.prepare(`
     SELECT

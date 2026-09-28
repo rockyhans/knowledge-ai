@@ -344,7 +344,28 @@ Retrieves all saved notes and URLs ordered by creation time descending.
 
 ---
 
-### 3. Ask Question: `POST /query`
+### 3. Delete Item: `DELETE /items/:id`
+
+Deletes a saved note or URL item and cascades deletion to all its vector chunks.
+
+#### Success Response (`200 OK`)
+```json
+{
+  "success": true,
+  "message": "Item deleted successfully"
+}
+```
+
+#### Error Response (`404 Not Found`)
+```json
+{
+  "error": "Item not found"
+}
+```
+
+---
+
+### 4. Ask Question: `POST /query`
 
 Executes the RAG pipeline: embeds query, finds Top-$K$ chunks, generates answer with citations.
 
@@ -375,7 +396,7 @@ Executes the RAG pipeline: embeds query, finds Top-$K$ chunks, generates answer 
 
 ---
 
-### 4. Health Check: `GET /health`
+### 5. Health Check: `GET /health`
 
 Checks server liveness.
 

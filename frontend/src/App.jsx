@@ -38,7 +38,7 @@ export default function App() {
 
           <div className="grid items-start gap-5 lg:grid-cols-2">
             <AddContent onAdded={refresh} />
-            <ItemsList items={items} loading={loading} />
+            <ItemsList items={items} loading={loading} onDeleted={refresh} />
           </div>
         </main>
         <AskQuestion />
